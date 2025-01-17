@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestionBourse.Pages.PageVendreAction"
+             Title="PageVendreAction">
+    <VerticalStackLayout Spacing="10">
+        <HorizontalStackLayout>
+            <Label WidthRequest="200" Text="Transaction" VerticalOptions="Center"/>
+            <Entry WidthRequest="100" IsEnabled="False" Text="{Binding IdTransaction}" VerticalOptions="Center"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label WidthRequest="200" Text="Action" VerticalOptions="Center"/>
+            <Entry WidthRequest="100" IsEnabled="False" Text="{Binding NomAction}" VerticalOptions="Center"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label WidthRequest="200" Text="Quantité" VerticalOptions="Center"/>
+            <Entry WidthRequest="100" x:Name="txtQuantite" IsEnabled="False" Text="{Binding Quantite}" VerticalOptions="Center"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label WidthRequest="200" Text="Prix achat" VerticalOptions="Center"/>
+            <Entry WidthRequest="100" IsEnabled="False" Text="{Binding PrixAchat}" VerticalOptions="Center"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label WidthRequest="200" Text="Nouvelle quantité" VerticalOptions="Center"/>
+            <Entry Keyboard="Numeric" WidthRequest="100" 
+               x:Name="txtNouvelleQuantite" Text=""
+               IsEnabled="True" VerticalOptions="Center"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Button x:Name="btnVendre" Text="Vendre l'action" VerticalOptions="Center"
+                Clicked="btnVendre_ClickedAsync" Margin="5" WidthRequest="380"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

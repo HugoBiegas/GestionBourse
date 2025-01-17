@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestionBourse.Pages.PageTransactions"
+             Title="PageTransactions">
+    <ScrollView>
+        <ListView x:Name="lvTransactions" ItemSelected="lvTransactions_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <HorizontalStackLayout>
+                            <Label VerticalOptions="Center" Text="{Binding IdTransaction}" WidthRequest="50"/>
+                            <Label VerticalOptions="Center" Text="{Binding NomAction}" WidthRequest="150"/>
+                            <Label VerticalOptions="Center" Text="{Binding Quantite}" WidthRequest="80"/>
+                            <Label VerticalOptions="Center" Text="{Binding PrixAchat}" WidthRequest="80"/>
+                        </HorizontalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ScrollView>
+</ContentPage>

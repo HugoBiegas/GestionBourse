@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestionBourse.MainPage">
+    <ScrollView>
+        <VerticalStackLayout Spacing="20">
+            <ListView x:Name="lvTraders" ItemSelected="lvTraders_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <HorizontalStackLayout>
+                                <Label VerticalOptions="Center" Text="{Binding IdTrader}" WidthRequest="50"/>
+                                <Label VerticalOptions="Center" Text="{Binding NomTrader}" WidthRequest="200"/>
+                            </HorizontalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

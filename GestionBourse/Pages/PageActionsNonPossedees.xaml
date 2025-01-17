@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestionBourse.Pages.PageActionsNonPossedees"
+             Title="PageActionsNonPossedees">
+    <VerticalStackLayout Spacing="10">
+        <ScrollView>
+            <ListView x:Name="lvActionsNonPossedees" ItemSelected="lvActionsNonPossedees_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <HorizontalStackLayout>
+                                <Label VerticalOptions="Center" Text="{Binding IdAction}" WidthRequest="50"/>
+                                <Label VerticalOptions="Center" Text="{Binding NomAction}" WidthRequest="150"/>
+                            </HorizontalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+        <VerticalStackLayout Spacing="10">
+            <HorizontalStackLayout>
+                <Label WidthRequest="200" Text="Numéro action" VerticalOptions="Center"/>
+                <Entry x:Name="txtIdAction" WidthRequest="100" IsEnabled="False" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label WidthRequest="200" Text="Nom action" VerticalOptions="Center"/>
+                <Entry x:Name="txtNomAction" WidthRequest="100" IsEnabled="False" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label WidthRequest="200" Text="Quantité" VerticalOptions="Center"/>
+                <Entry Keyboard="Numeric" WidthRequest="100" x:Name="txtQuantite" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label WidthRequest="200" Text="Prix achat" VerticalOptions="Center"/>
+                <Entry Keyboard="Numeric" WidthRequest="100" x:Name="txtPrixAchat" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Button x:Name="btnAcheter" Text="Acheter l'action" Clicked="btnAcheter_Clicked" Margin="5" WidthRequest="380"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
